@@ -1,0 +1,19 @@
+<div class="ui vertical segment">
+<!-- Place somewhere in the <body> of your page -->
+<div class="service-slider">
+  <ul>
+    {% for photo in page.gallery %}
+    <li>
+      <img class="ui fluid bordered hidden image" src="{{photo.url}}"/>
+      
+        <legend class="ui centered">{{photo.text}}</legend>
+      
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
+</div>
+
+

@@ -1,0 +1,75 @@
+---
+layout: page
+---
+<div class="ui fluid grid">
+  <div class="ten wide column">
+    {{content}}
+      <div class="ui divided items">
+        {% for post in paginator.posts %}
+          <div class="item post">
+            <div class="content">
+              <div class="ui fluid padded image">
+                <img src="{{ post.image.url }}">
+              </div>
+              <div class="header" style="margin-top: 1em">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </div>
+              <div class="meta">
+                <span class="author">Written by <a href="#">{{ post.author }}</a> on {{ post.date | date: "%b %-d, %Y" }}</span>
+              </div>
+
+              <div class="description">
+                {{ post.excerpt }}
+              </div>
+
+              <div class="extra">
+                <div>
+                  <a href="#">Read more</a>
+                </div>
+                <span class="ui right floated medium labels">
+                  {% for tag in post.tags %}
+                <div class="ui mini label">
+                    <i class="tag icon"></i> {{ tag }}
+                </div>
+                  {% endfor %}
+                </span>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div> <!-- items -->
+
+      {% if paginator.total_page %}
+      <!-- Pagination links -->
+      <div class="ui fluid three item menu">
+        <div class="item">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}">Previous page</a>
+        {% else %}
+          <span>Previous</span>
+        {% endif %}
+        </div>
+        <div class="item">
+          <span class="page_number ">{{ paginator.page }} of {{ paginator.total_pages }}</span>
+        </div>
+        <div class="item">
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}">Next page</a>
+        {% else %}
+          <span>Next</span>
+        {% endif %}
+        </div>
+      </div>
+      {% endif %}
+
+  </div>
+  <div class="six wide column">
+
+    {% include subscribe_box.html %}
+
+    {% include blog_archive_posts.html %}
+
+    {% include blog_twitter.html %}
+
+  </div>
+</div>

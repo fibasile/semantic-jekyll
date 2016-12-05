@@ -1,0 +1,28 @@
+<div class="ui fluid raised {{ site.colors.primary }} card">
+  <div class="image">
+    <img src="http://placehold.it/500x500">
+  </div>
+<div class="content">
+<div class="header">
+Company Headquarters
+</div>
+<div class="description">
+  <strong>Address</strong><br/>
+  <address>
+    {{ site.contact.address }}
+  </address>
+  <strong>Phone:</strong><br/>
+  {{ site.contact.phone }}<br/>
+  <strong>Email:</strong><br/>
+  {{ site.contact.email }}
+</div>
+</div>
+<div class="ui two bottom attached buttons">
+<div class="ui button">
+<i class="ui icon phone"></i> <a href="tel:{{ site.contact.phone | url_encode }} ">Call us</a>
+</div>
+<div class="ui button">
+<i class="ui icon mail"></i> <a href="mailto:{{ site.contact.email }}">Write us</a>
+</div>
+</div>
+</div>

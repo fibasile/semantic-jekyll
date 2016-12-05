@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+{% include menuhead.html %}
+
+<div class="page">
+    <!-- <img class="topimage" src="{{page.image.url}}" alt="{{page.image.description}}"> -->
+
+    <div class="ui vertical padded segment">
+        <div class="ui container">
+            <div class="ui breadcrumb">
+                <a class="section" href="{{site.base_url}}/"><i class="ui icon home"></i> Home</a>
+                <div class="divider"> / </div>
+                <a class="section" href="{{site.base_url}}/blog">Blog</a>
+                <div class="divider"> / </div>
+                <a class="section">{{ page.title}}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui vertical segment container">
+      <div class="ui fluid grid">
+        <div class="ten wide column">
+                <article>
+                    <img class="ui huge fluid image" src="http://placehold.it/1200x500&text=[img]" />
+                    <div class="post date">February 12, 2014 by <a href="#">John Smith</a>
+                     </div>
+                     <h2 class="ui header"><a href="#">Blog Post Title</a>
+                     <span class="ui right floated medium labels">
+                             <div class="ui label">
+                                 <i class="tag icon"></i> Business
+                             </div>
+                             <div class="ui label">
+                                 <i class="tag icon"></i> Internet
+                             </div>
+                      </span></h2>
+                      {% include post_minutes.html %}
+
+
+                     <!-- <img class="ui right floated image" src="http://placehold.it/400x240&text=[img]" /> -->
+                     {{ content }}
+
+                     <div id="disqus_thread"></div>
+                      <script>
+
+                      /**
+                      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                      /*
+                      var disqus_config = function () {
+                      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                      };
+                      */
+                      (function() { // DON'T EDIT BELOW THIS LINE
+                      var d = document, s = d.createElement('script');
+                      s.src = '//{{ site.disqus_username }}.disqus.com/embed.js';
+                      s.setAttribute('data-timestamp', +new Date());
+                      (d.head || d.body).appendChild(s);
+                      })();
+                      </script>
+                      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            </article>
+
+        </div>
+        <div class="six wide column">
+
+              {% include subscribe_box.html %}
+
+              {% include post_share.html %}
+
+              {% include post_related.html %}
+        </div>
+    </div>
+  </div>
+</div>

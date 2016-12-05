@@ -1,0 +1,16 @@
+<div class="ui {{ site.colors.primary }} padded segment">
+  <div class="content">
+<div class="ui  header">Features</div>
+<div class="ui relaxed list">
+  {% for feature in page.features %}
+  <div class="item">
+    <div class="image"><i class="ui large check {{ site.colors.primary }} icon"></i></div>
+    <div class="content">
+    <div class="header">{{feature.label}}</div>
+    {{feature.text}}
+    </div>
+  </div>
+{% endfor %}
+  </div>
+</div>
+</div>

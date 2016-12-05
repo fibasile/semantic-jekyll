@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% include menuhead.html %}
+
+<div class="page">
+    {% if page.image %}
+    <div class="topimage" style="background-image: url({{page.image.url}})"></div>
+    {% endif %}
+    <div class="ui vertical padded segment">
+        <div class="ui container">
+            <div class="ui large breadcrumb">
+                <a class="section" href="{{site.base_url}}/"><i class="ui icon home"></i> Home</a>
+                {% if page.collection != null %}
+                <div class="divider"> / </div>
+                <a class="section" style="text-transform: capitalize" href="{{site.base_url}}/{{page.collection}}/">{{ page.collection }}</a>
+                {% endif %}
+                <div class="divider"> / </div>
+                <a class="section">{{ page.title}}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui vertical segment">
+        <div class="ui container">
+
+            {{ content }}
+        </div>
+    </div>
+</div>

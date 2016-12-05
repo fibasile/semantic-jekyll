@@ -1,0 +1,11 @@
+{% assign words_per_minute =  200 %}
+{% assign words = page.content | strip_html | number_of_words %}
+<h4 class="ui horizontal divider header">
+{% if words < 180 %}
+  less than 1 minute read
+{% elsif words < 360 %}
+  1 minute read
+{% else %}
+  {{ words | divided_by:words_per_minute }} minute read
+{% endif %}
+</h4>

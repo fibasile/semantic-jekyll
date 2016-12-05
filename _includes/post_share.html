@@ -1,0 +1,17 @@
+<div class="ui raised  fluid card">
+  <div class="center aligned content">
+    <h3 class="header">Share this post</h3>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" class="ui circular facebook icon button">
+      <i class="facebook icon"></i>
+    </a>
+    <a href="https://twitter.com/intent/tweet?{% if site.twitter_username %}via={{ site.twitter_username }}&{% endif %}text={{ page.title }} {{ page.url | absolute_url }}" class="ui circular twitter icon button">
+      <i class="twitter icon"></i>
+    </a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}" class="ui circular linkedin icon button">
+      <i class="linkedin icon"></i>
+    </a>
+    <a href="https://plus.google.com/share?url={{ page.url | absolute_url }}" class="ui circular google plus icon button">
+      <i class="google plus icon"></i>
+    </a>
+  </div>
+</div>

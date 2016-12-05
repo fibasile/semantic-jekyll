@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{site.title}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="{{site.base_url}}/assets/css/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="{{site.base_url}}/assets/js/vendor/semantic-ui/dist/semantic.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="{{site.base_url}}/assets/css/main.css">
+        <link rel="stylesheet" href="{{site.base_url}}/assets/css/homepage.css">
+        <script src="{{site.base_url}}/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <link rel="stylesheet" href="{{site.base_url}}/assets/js/vendor/unslider/dist/css/unslider.css" type="text/css" media="screen">
+        
+        <style>
+        /** hack to set background colors using _config.yml **/
+        body{
+          font-family: 'Roboto', sans-serif;
+        }
+        #hero {
+ 
+          background-color: {{site.colors.background}};
+        }
+        div#followingmenu {
+          background-color: {{site.colors.background}};
+        }
+        
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        {% include following_menu.html %}
+
+        {% include sidebar.html %}
+
+
+        <!-- Page Contents -->
+        <div class="pusher">
+
+          {% include top_contacts_header.html %}
+
+            {{ content }}
+
+            {% include footer.html %}
+
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+        <script>window.jQuery || document.write('<script src="{{site.base_url}}/assets/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    
+    
+        <script src="{{site.base_url}}/assets/js/vendor/semantic-ui/dist/semantic.min.js"></script>
+        <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+        <script src="//stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
+        <script src="//stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
+        <script src="{{site.base_url}}/assets/js/vendor/unslider/dist/js/unslider-min.js" type="text/javascript" charset="utf-8"></script>        
+        <script src="{{site.base_url}}/assets/js/main.js"></script>
+
+        {% include google_analytics.html %}
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_code}}"></script>
+
+</body>
+</html>

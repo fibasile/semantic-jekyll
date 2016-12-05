@@ -1,0 +1,51 @@
+---
+layout: page
+---
+<div class="ui fluid stackable grid container">
+  <div class="sixteen wide column">
+      {{content}}
+  </div>
+  <div class="sixteen wide column">
+    <h3 class="ui header">Click one of the images below to learn more about our classes</h3>
+    <div class="ui three stackable service cards">
+      {% for class in site.classes %}
+      <div class="fluid card">
+        <div class="blurring dimmable image">
+          <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <div class="header">{{ class.title }}</div><br/>
+              <a class="ui inverted button" href="{{ class.url }}">Learn more</a>
+            </div>
+          </div>
+        </div>
+          <img src="{{ class.thumbnail.url }}">
+        </div>
+        <div class="extra content">
+          <div class="ui two columns grid">
+            <div class="column">
+              <div class="small header">{{ class.title }}</div>
+            </div>
+            <div class="column">
+              Level <span class="ui tiny label">{{ class.level}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>    
+  </div>
+</div>
+
+
+<div class="ui fluid stackable three column grid container">
+  <div class="column">
+      {% include class_faculty.html %}
+  </div>
+  <div class="column">
+      <div class="ui centered medium rectangle test ad" data-text="Medium Rectangle"></div>
+  </div>
+  <div class="column">
+     {% include class_apply.html %}
+  </div>
+</div>

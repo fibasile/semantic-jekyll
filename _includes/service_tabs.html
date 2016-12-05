@@ -1,0 +1,6 @@
+<h3 class="ui header">Other services</h3>
+<div class="ui fluid large horizontal secondary menu">
+  {% for service in site.services %}
+    <a class="item {% if page.url == service.url %} active {% endif %}"href="{{service.url}}">{{ service.title }}</a>
+  {% endfor %}
+</div>

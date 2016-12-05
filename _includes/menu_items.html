@@ -1,0 +1,9 @@
+{% assign current = page.url | downcase | split: '/' %}
+  <a class="item {% if current[1] == 'about' %} active{% endif %}" href="{{ site.base_url }}{% link about/index.html %}">About us</a>
+  <a class="item {% if current[1] == 'services' %} active{% endif %}" href="{{ site.base_url }}{% link services/index.html %}">Services</a>
+  <a class="item {% if current[1] == 'projects' %} active{% endif %}" href="{{ site.base_url }}{% link projects/index.html %}">Portfolio</a>
+  <a class="item {% if current[1] == 'classes' %} active{% endif %}" href="{{ site.base_url }}{% link classes/index.html %}">Training</a>
+  <a class="item {% if current[1] == 'blog' %} active{% endif %}" href="{{ site.base_url }}{% link blog/index.html %}">Blog</a>
+<div class="ui fluid popup bottom left transition hidden">
+  Test
+</div>

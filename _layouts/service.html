@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+
+<div class="ui padded stackable grid">
+        <div class="top aligned eight wide column">
+          {{ content }}          
+        </div>
+        
+        <div class="top aligned eight wide column">
+          {% if page.gallery %}
+            {% include service_gallery.html %}
+          {% endif %}
+
+          {% if page.brochure %}
+            {% include service_brochure.html %}
+          {% endif %}
+          
+          {% include service_quote.html %}
+          
+          {% include service_tabs.html %}
+          
+
+        </div>
+
+
+    </div>
+

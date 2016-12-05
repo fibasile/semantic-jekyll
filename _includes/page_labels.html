@@ -1,0 +1,7 @@
+{% if page.labels %}
+  <h3 class="ui header">Keywords</h3>
+
+  {% for tag in page.labels %}
+  <div class="ui label">{{ tag }}</div>
+  {% endfor %}
+{% endif %}

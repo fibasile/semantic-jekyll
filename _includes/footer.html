@@ -1,0 +1,38 @@
+<div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <div class="ui stackable inverted divided equal height stackable grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">About</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Sitemap</a>
+            <a href="{{site.base_url}}{% link contact/index.html %}" class="item">Contact Us</a>
+            <a href="{{site.base_url}}{% link about/index.html %}" class="item">About</a>
+            <a href="{{site.base_url}}{% link services/index.html %}" class="item">Services</a>
+            <a href="{{site.base_url}}{% link projects/index.html %}" class="item">Portfolio</a>
+            <a href="{{site.base_url}}{% link classes/index.html %}" class="item">Training</a>
+            <a href="{{site.base_url}}{% link about/privacy.md %}#privacy" class="item">Privacy policy</a>
+            <a href="{{site.base_url}}{% link about/privacy.md %}#terms-and-conditions" class="item">Terms and conditions</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Services</h4>
+          <div class="ui inverted link list">
+            {% for service in site.services %}
+            <a href="{{ service.url }}" class="item">{{service.title}}</a>
+            {% endfor %}
+          </div>
+          <h4 class="ui inverted header">Training</h4>
+          <div class="ui inverted link list">            
+            {% for class in site.classes %}
+            <a href="{{ class.url }}" class="item">{{class.title}}</a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+          {% include follow_us.html %}
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{% if site.related_posts.size > 0 %}
+
+<div class="ui vertical striped segment">
+  <h4 class="ui medium header">You might also like</h4>
+  <div class="ui divided items">
+    {% for related in site.related_posts limit:4 %}
+      {% if related.url != page.url %}
+  <div class="item">
+    <div class="content">
+      <div class="ui fluid image">
+       <a href="#"><img src="{{ related.image.url}}"></a>
+      </div>
+      <!-- <a href="#" class="header"> Lorem ipsum dolor sit amet</a> -->
+      <h3 class="header">
+         <a href="{{ related.url }}">{{ related.title }}</a>
+      </h3>
+      <p>{{ related.blurb }}</p>
+      <!-- <div class="meta"><span class="inverted label">tag1</span></div> -->
+    </div>
+  </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+  

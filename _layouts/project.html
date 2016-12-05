@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+<div class="ui padded stackable grid">
+    <div class="row">
+        <div class="top aligned ten wide column">
+          {{ content }}
+          <div class="ui padded segment">
+          {% include project_contact.html %}
+          </div>
+        </div>
+        <div class="top aligned six wide column">
+          {% if page.features %}
+            {% include project_features.html %}
+          {% endif %}
+          {% if page.gallery %}
+            {% include project_gallery.html %}
+          {% endif %}
+        </div>
+    </div>
+</div>

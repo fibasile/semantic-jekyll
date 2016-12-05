@@ -1,0 +1,52 @@
+---
+layout: page
+---
+
+<div class="ui fluid stackable grid container">
+    <div class="four wide column">
+      {{ content }}
+    </div>
+    <div class="twelve wide column">
+
+      <div class="ui text menu">
+        <a class="active item">
+          All
+        </a>
+        <a class="item">
+          Most Comments
+        </a>
+        <a class="item">
+          Most Popular
+        </a>
+      </div>
+
+      <div class="ui two stackable service cards">
+        {% for project in site.projects %}
+        <div class="fluid card">
+          <div class="blurring dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="{{project.url}}" class="ui inverted button">Learn more</a>
+                </div>
+              </div>
+            </div>
+            <img src="{{ project.thumbnail.url }}">
+          </div>
+          <div class="content">
+            <div class="header">{{ project.title }}</div>
+            <p>{{project.description}}</p>
+          </div>
+          <div class="extra content">
+            <p><strong>Client:</strong> {{ project.client }}</p>
+            {% for label in project.labels %}
+            <span class="label">{{ label }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+  </div>
+
+</div>

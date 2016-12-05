@@ -1,0 +1,28 @@
+<div class="ui vertical  segment">
+      <h4 class="ui horizontal header divider">
+        <a href="#">Case Studies</a>
+      </h4>
+
+      {% for study in site.reports %}
+      <div class="ui basic segment">
+        <div class="ui  header"><a href="#" onclick="showModal('report-{{ study.name }}')"><i class="ui medium icon lightbulb"></i> {{ study.title | escape}}</a></div>
+        <div class="ui text">
+          {{ study.description }}
+        </div>
+        <div class="ui center aligned basic segment">
+          <a onclick="showModal('report-{{ study.name }}')" class="ui basic button">Learn more</a>
+        </div>
+      </div>
+      <div class="ui modal" id="report-{{ study.name }}">
+        <div class="header">{{ study.title | export}}</div>
+        <div class="content">
+          {{ study.content | markdownify }}
+        </div>
+      </div>
+
+      {% unless forloop.last %}
+        <div class="ui divider"></div>
+      {% endunless %}
+      {% endfor %}
+
+</div>

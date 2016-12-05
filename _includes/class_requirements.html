@@ -1,0 +1,12 @@
+          {% if page.requirements %}
+          <div class="ui fluid card">
+              <div class="content">
+              <a class="header"> Requirements</a>
+              <ul class="ui list">
+                {% for req in page.requirements %}
+                <li class="item">{{ req }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}

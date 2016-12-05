@@ -1,0 +1,18 @@
+<div class="ui fluid stripe segment">
+  <div class="content">
+  <h3 class="small header">Archive</h3>
+  {% for post in site.posts %}
+       {% assign currentDate = post.date | date: "%Y" %}
+       {% if currentDate != myDate %}
+           {% unless forloop.first %}</div>{% endunless %}
+           <h3 class="ui  header">Year {{ currentDate }}</h4>
+           <div class="ui divider"></div>
+           <div class="ui bulleted list">
+           {% assign myDate = currentDate %}
+       {% endif %}
+       <div class="item"><a href="{{ post.url }}"> {{ post.title }}</a></div>
+       {% if forloop.last %}</ul>{% endif %}
+   {% endfor %}
+  </div>
+</div>
+</div>

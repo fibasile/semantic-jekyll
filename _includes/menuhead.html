@@ -1,0 +1,14 @@
+<div id="hero" class="ui pagehead vertical center aligned segment">
+    <div class="ui  container">
+      <div class="ui huge secondary pointing  {{ site.colors.primary }} menu" style="border:none">
+        <a class="toc  {{ site.colors.primary }} item">
+          <i class="sidebar icon"></i> {{ site.title }}
+        </a>
+        <a class="item" href="{{site.base_url}}/">{{ site.title }}</a>
+           {% include menu_items.html %}
+        <div class="right item">
+          <a class="ui huge {{ site.colors.primary }} button" href="{{site.base_url}}/contact">Contact us</a>
+        </div>
+      </div>
+    </div>
+ </div>

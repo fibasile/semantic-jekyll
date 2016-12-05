@@ -1,0 +1,101 @@
+title: 'Semantic Jekyll'
+
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+    Semantic Jekyll is a theme for the Jekyll site generator based on the awesome Semanti-ui framework
+    for building a corporate website
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+slogan:
+    title: Semantic Jekyll
+    action: A modern corporate theme for Jekyll based on Semantic-UI
+
+contact:
+  address: >
+    Napoleon Av.<br/>
+    90210 Beverly Hills<br/>
+    USA <br>
+  phone: +1 333 3333 4444
+  email: info at company.com
+  map_url: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11541.31441883838!2d10.4920185!3d43.6829314!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d8c1081b8f68306!2sFabLab+Toscana!5e0!3m2!1sen!2sit!4v1479319599556
+
+
+twitter_username: fibasile
+github_username:  fibasile
+
+# Build settings
+markdown: kramdown
+
+# Google Analytics
+google_analytics_id: UA-XXXXX-X
+
+# disqus
+disqus_username: semanticjekyll
+
+# Addthis.com
+# get your code at https://www.addthis.com/dashboard
+addthis_code: ra-582c8c1f1e92359a
+
+lsi: true
+paginate: 5 # amount of posts to show
+paginate_path: "/blog/page:num/"
+# Outputting
+permalink: /blog/:categories/:title/
+
+
+colors:
+  primary: teal 
+  background: "#F7F9FF"
+#   atomic green: dcec00
+#   teal: 00B5AD
+#   olive: B5CC18
+#   green: #21BA45      
+           
+collections:
+  projects:
+    output: true
+  services:
+    output: true
+  classes:
+    output: true
+  reports:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "services" # a collection in your site, in plural form
+    values:
+      layout: "service"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      
+  -
+    scope:
+      path: ""
+      type: "classes"
+    values:
+      layout: "class"
+
+gems:
+  - jekyll-paginate
+  - classifier-reborn
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
+  
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - classifier-reborn
+  - jekyll-sitemap
+  - jekyll-feed
+  - jemoji
+
+

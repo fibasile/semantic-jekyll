@@ -1,0 +1,25 @@
+---
+layout: page
+---
+
+<!-- add sections in config.yml about key and fill in tabs as needed into includes (about_....html) -->
+
+<div class="ui padded stackable grid">
+    <div class="row">
+        <div class="top aligned four wide column">
+            <div class="tabs ui fluid large vertical menu">
+              {% for section in page.about %}
+                <a class="item {% if section[0] == 'intro' %} active {% endif %}" data-tab="{{ section[0] }}">{{ section[1].title }}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="top aligned twelve wide column">
+              {% for section in page.about %}
+            <div class="ui tab {% if section[0] == 'intro' %} active {% endif %}" data-tab="{{ section[0] }}">
+                    {% assign sect_include = section[0] | prepend: 'about_' | append: '.html' %}
+                    {% include {{sect_include}} %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

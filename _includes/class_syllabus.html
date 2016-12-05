@@ -1,0 +1,13 @@
+{% if page.syllabus %}
+  <h3 class="ui header">What you will learn</h3>
+    <div class="ui styled accordion">
+      {% for item in page.syllabus %}
+      <div class="title">
+        <i class="dropdown icon"></i> {{ item.label }}
+      </div>
+      <div class="content">
+        {{ item.text }}
+      </div>
+      {% endfor %}
+    </div>
+{% endif %}

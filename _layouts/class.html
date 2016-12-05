@@ -1,0 +1,37 @@
+---
+layout: page
+---
+
+<div class="ui padded stackable grid">
+    <div class="row">
+        <div class="top aligned ten wide column">
+          <h2 class="ui header">{{ page.title }}</h2>
+          {{ content }}
+        </div>
+        
+        <div class="top aligned six wide column">
+          
+          {% include page_labels.html %}
+          
+          {% include class_syllabus.html %}
+          
+          {% include class_apply.html %}
+          
+          {% include page_testimonial.html %}
+        </div>
+    </div>
+</div>
+<div class="ui padded stackable  grid">
+  <div class="six wide column">
+    {% include class_faculty.html %}
+
+    {% include class_requirements.html %}
+    
+    {% include page_useful_info.html %}
+    
+  </div>
+  <div class="ten wide column">
+    {% include service_gallery.html %}
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+{% if page.faculty %}
+<div class="ui fluid card">
+    <div class="content">
+    <a class="header"><i class="ui users icon"></i> Faculty</a>
+    <div class="ui divided padded large list">
+      {% for staff in page.faculty %}
+      <div class="item">
+          <img class="ui huge avatar image" src="{{staff.pic}}"/>
+          <div class="content">
+            <a class="header">{{ staff.name }}</a>
+            {{ staff.role }} <br/>
+            <i class="ui mail icon"></i> <a href="mailto:{{ staff.email }}">{{ staff.email }}</a>
+          </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}

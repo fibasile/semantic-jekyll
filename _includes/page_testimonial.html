@@ -1,0 +1,6 @@
+          {% if page.testimonial %}
+            <h3>"{{ page.testimonial.text }}"</h3>
+            <p>
+              <img src="{{ page.testimonial.pic }}" class="ui avatar image"> <b>{{ page.testimonial.name }}</b> {{ page.testimonial.role }}
+            </p>
+          {% endif %}

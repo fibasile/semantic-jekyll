@@ -1,0 +1,20 @@
+<h1 class="ui header">{{ page.about.history.title }}</h1>
+<h1 class="ui sub header">{{ page.about.history.subtitle }}</h1>
+<div class="ui relaxed feed">
+   {% for event in page.about.history.events %}
+    <div class="event">
+        <div class="label">
+            <i class="ui icon {{site.colors.primary}} large calendar"></i>
+        </div>
+        <div class="content">
+            <div class="date">
+                {{ event.when }}
+            </div>
+            <div class="summary">
+                <h3 class="ui header">{{ event.what }}</h3>
+                {{ event.how }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

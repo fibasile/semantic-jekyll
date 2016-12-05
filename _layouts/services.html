@@ -1,0 +1,45 @@
+---
+layout: page
+---
+
+<div class="ui fluid stackable grid container">
+  <div class="six wide column">
+      {{ content }}
+      {% include service_info1.html %}
+  </div>
+  <div class="ten wide column">
+    <h2 class="ui tiny header">Click one of the images below to learn more about our services</h2>
+    <div class="ui two stackable service cards">
+      {% for service in site.services %}
+      <div class="fluid card">
+        <div class="blurring dimmable image">
+          <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <a class="ui inverted button" href="{{ service.url }}">Learn more</a>
+            </div>
+          </div>
+        </div>
+          <img src="{{ service.thumbnail.url }}">
+        </div>
+        <div class="extra content">
+          <div class="header">{{ service.title }}</div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="eight wide center aligned column">
+    <div class="ui padded segment">
+      {% include service_quote.html %}
+    </div>
+  </div>
+  <div class="eight wide right aligned column">
+    
+
+    {% include service_info2.html %}
+    
+      {% include service_brochure_list.html %}
+  </div>
+</div>

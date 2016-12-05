@@ -1,0 +1,17 @@
+          {% if page.information %}
+          <div class="ui fluid card">
+              <div class="content">
+              <a class="header"> Useful information</a>
+              <ul class="ui list">
+                {% for req in page.information %}
+                <li class="item">
+                    <div class="content">
+                      <div class="header">{{ req.key }}</div>
+                      <div class="description">{{ req.value }}</div>
+                    </div>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}

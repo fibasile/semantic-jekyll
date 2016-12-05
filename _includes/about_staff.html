@@ -1,0 +1,19 @@
+<h3 class="ui header">{{ page.about.staff.title }}</h3>
+<h3 class="ui sub header">{{ page.about.staff.subtitle }}</h3>
+<div class="ui three cards">
+   {% for person in page.about.staff.people %}
+
+    <div class="ui fluid card">
+        <div class="ui image">
+            <img src="{{ person.picture }}">
+        </div>
+        <div class="content">
+            <div class="header">{{ person.name }}</div>
+            <div class="meta">
+                <a>{{ person.role }}</a>
+            </div>
+            <div class="description">{{ person.cv }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,19 @@
+<div class="ui vertical segment">
+<h3 class="header">Project Gallery</h3>
+<div class="project-slider">
+<ul>
+{% for photo in page.gallery %}
+  <li>
+    <div class="ui fluid card">
+      <div class="image">
+        <img class="ui hidden image fluid" src="{{photo.url}}">
+      </div>
+      <!-- <div class="centered content">
+        <div class="description">{{photo.text}}</div>
+      </div> -->
+    </div>
+  </li>
+{% endfor %}
+</ul>
+</div>
+</div>
