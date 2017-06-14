@@ -4,7 +4,7 @@ email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
     Semantic Jekyll is a theme for the Jekyll site generator based on the awesome Semanti-ui framework
     for building a corporate website
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/semantic-jekyll" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 slogan:
