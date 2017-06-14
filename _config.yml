@@ -5,6 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
     Semantic Jekyll is a theme for the Jekyll site generator based on the awesome Semanti-ui framework
     for building a corporate website
 baseurl: "/semantic-jekyll" # the subpath of your site, e.g. /blog
+base_url: "/semantic-jekyll" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 slogan:
